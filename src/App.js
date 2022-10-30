@@ -4,7 +4,6 @@ import Filter from "./components/filter/filter";
 
 const App = () => {
   
-
   const [list, setList] = useState([])
   
   const addNewItem = (foodItems) => {

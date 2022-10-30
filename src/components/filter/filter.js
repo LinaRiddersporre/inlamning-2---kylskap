@@ -4,7 +4,7 @@ class Filter extends React.Component{
 
     render(){
         return(
-            <button></button>
+            <button>skit</button>
         )
     }
 }
