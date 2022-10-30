@@ -7,7 +7,6 @@ const Refrigerator = (props) => {
         productCategory: '',
         expirationDate: 0
     }
-
     
     const productCategory = [{
         productCategory: ''
