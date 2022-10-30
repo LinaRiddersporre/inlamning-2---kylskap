@@ -1,10 +1,16 @@
 import React from "react";
 
-class Filter extends React.Component{
+class Filter extends React.Component {
 
-    render(){
-        return(
-            <button>skit</button>
+    render() {
+        return (
+            <div>
+                {this.props.categories.map((value) => {
+                    return (
+                        <button onClick={() => { this.props.filterWord(value) }}> {value} </button>)
+                })}
+            </div>
+
         )
     }
 }

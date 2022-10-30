@@ -1,27 +1,20 @@
 import Filter from "../filter/filter"
 
 const Refrigerator = (props) => {
-    const foodItems = {
+    const foodItem = {
         productName: '',
         numberOfProduct: 0,
         productCategory: '',
         expirationDate: 0
     }
-    
-    const productCategory = [{
-        productCategory: ''
-    }]
 
     const submitForm = (e) => {
         e.preventDefault()
-        console.log(e.target)
-        foodItems.productName = e.target.children[0].value
-        foodItems.numberOfProduct = e.target.children[1].value
-        foodItems.productCategory = e.target.children[2].value
-        productCategory.productCategory = e.target.children[2].value
-        foodItems.expirationDate = e.target.children[3].value
-        console.log(productCategory)
-        props.addNewItem(foodItems)
+        foodItem.productName = e.target.children[0].value
+        foodItem.numberOfProduct = e.target.children[1].value
+        foodItem.productCategory = e.target.children[2].value
+        foodItem.expirationDate = e.target.children[3].value
+        props.addNewItem(foodItem)
     }
 
     return(
@@ -33,8 +26,6 @@ const Refrigerator = (props) => {
                 <input type='date'></input>
                 <input type='submit'></input>
             </form>
-            {console.log('ref:', productCategory)}
-            <Filter productCategory={productCategory}/>
         </div>
     )
 }
