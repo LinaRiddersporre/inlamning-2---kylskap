@@ -25,23 +25,26 @@ const App = () => {
   return(
     <div className="divBody">
       <Refrigerator addNewItem={addNewItem}/>
+      <div className="showAll">
+        <button onClick={()=>{setWordToFilterBy('Alla')}}>Alla</button>
+      </div>
+      
       <Filter  categories={categories} filterWord={filterWord}/>
-      <button onClick={()=>{setWordToFilterBy('Alla')}}>Alla</button>
       <ul>
         {listOfFoodItems.map((value, index) => {
           return wordToFilterBy === 'Alla' ? (
-            <li key={index}>
+            <li key={index} className='productCard'>
               <h2>{value.productCategory}</h2>  
-              <h1>{value.productName}</h1> 
-              <h4>{value.numberOfProduct}</h4> 
-              {value.expirationDate}
+              <h2>{value.productName}</h2> 
+              <h2>{value.numberOfProduct}</h2> 
+              <p>{value.expirationDate}</p>
             </li>
           ) : wordToFilterBy === value.productCategory ? (
-            <li key={index}>
+            <li key={index} className='productCard'>
               <h2>{value.productCategory}</h2>  
-              <h1>{value.productName}</h1> 
-              <h4>{value.numberOfProduct}</h4> 
-              {value.expirationDate}
+              <h2>{value.productName}</h2> 
+              <h2>{value.numberOfProduct}</h2> 
+              <p>{value.expirationDate}</p>
             </li>
           ) : null
         })}

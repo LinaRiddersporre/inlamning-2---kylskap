@@ -1,0 +1,10 @@
+.filterDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.filterDiv button{
+    margin: 5px;
+    min-width: 6rem;
+}

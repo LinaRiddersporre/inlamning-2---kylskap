@@ -9,7 +9,50 @@ body {
 
 .divBody{
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
+.divBody .showAll{
+    display: flex;
+    justify-content: center;
+}
 
+.divBody .showAll button{
+    width: 8rem;
+    height: 2rem;
+}
 
+.divBody #div form{
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    margin: 1rem 0;
+}
+
+.divBody ul{
+    display: flex;
+    flex-direction: row;
+    max-width: 70%;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.divBody ul .productCard{
+    display: flex;
+    flex-direction: column;
+    border: solid 3px black;
+    border-radius: 30%;
+    min-width: 20rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.divBody ul .productCard h2, p{
+    margin: 2px 0;
+}
